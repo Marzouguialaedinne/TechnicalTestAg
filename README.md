@@ -14,8 +14,8 @@ Ensuite lancer cette commande pour créer la base de données :
 # php bin/console doctrine:schema:update --force 
 
 
-Puis lancer la fixture avec cette commande  commande : 
-# php bin/console doctrine:fixtures:load
+Puis lancer la commande pour executer le webPack : 
+# npm run dev
 
 
 Finalement lancer l'application soit avec symfony CLI ou bien avec cette commande 
