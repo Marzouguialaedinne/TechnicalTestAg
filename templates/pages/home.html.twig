@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="mt-4">
+    <div>
+        <a href="{{ path('new_employe') }}" class="btn btn-primary mb-3">Add Employee</a>
+    </div>
+    <div class="table">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Job</th>
+                <th scope="col">Department Name</th>
+                <th scope="col">Department Location</th>
+                <th scope="col">Project Number</th>
+                <th scope="col">Manager</th>
+
+                <th scope="col">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for employe in listEmployee %}
+                <tr>
+                    <th scope="row">{{ employe.ename }}</th>
+                    <td>{{ employe.job }}</td>
+                    <td>{{ employe.departement.dname }}</td>
+                    <td>{{ employe.departement.loc }}</td>
+                    <td>{{ employe.projects|length }}</td>
+                    <td>{{ employe.mgr }}</td>
+                    <td>
+                        <a href="{{ path('edit_employe', {'id' : employe.id }) }}" class="btn btn-primary">Edit</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

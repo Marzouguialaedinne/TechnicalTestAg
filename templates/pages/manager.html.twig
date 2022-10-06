@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="mt-4">
+    <div class="table">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Direct Employee</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for man in managers %}
+                <tr>
+                    <th scope="row">{% if man.manager is defined  %} KING {% endif %} {{ man.manager }}</th>
+                    <td>{{ man.Employee.employes|length }}</td>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

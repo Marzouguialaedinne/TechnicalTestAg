@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <title>{% block title %}Technical Test Agena3000!{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+</head>
+
+<body>
+<main class="container mt-4" role="main">
+    {% include 'partials/_nav.html.twig' %}
+    <div class="row">
+        <div class="col-2">
+            {% include 'partials/_left.html.twig' %}
+        </div>
+        <div class="col">
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+</main>
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+{% endblock javascripts%}
+
+</body>
+</html>
