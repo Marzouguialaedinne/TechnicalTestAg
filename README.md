@@ -1,5 +1,5 @@
-# TechnicalTest Sportyma
-Test Technique Symfony4.4 
+# TechnicalTest Agenna3000
+Test Technique Symfony5.4
 
 En premier lieu il faut lancer la commande ci-dessous pour installer les dépendances graçe au fichier composer.json
 
